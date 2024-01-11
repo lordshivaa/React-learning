@@ -10,22 +10,20 @@ function App() {
   // let counter = 15
 
   const addValue = () =>{
-    counter = counter + 1
-    setCounter(counter)
-    console.log(counter);
-    if (counter === 20) {
-      alert("you should not add more")
-      
-    }
+    // counter = counter + 1
+    setCounter(pervCounter => pervCounter + 1)
+    setCounter( pervCounter => pervCounter + 1 )
+    setCounter(pervCounter => pervCounter + 1)
+    setCounter(pervCounter => pervCounter + 1)
+    setCounter(pervCounter => pervCounter + 1)
+    console.log(counter); 
 
   }
 
   const removeValue = () => {
     counter = counter - 1
     setCounter(counter)
-    if (counter === 0) {
-      alert("connot add more")
-    }
+
   }
 
   return (
