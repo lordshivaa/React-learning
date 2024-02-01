@@ -18,11 +18,13 @@ function App() {
     for (let i = 1; i <= length; i++) {
         let char = Math.floor(Math.random() * str.length + 1)
         pass += str.charAt(char)
+        console.log(pass);
     }
     setPassword(pass)
 
   }, [length, numberAllowed, charAllowed, setPassword])
 
+  // Area to copy the password 
 
   const copyPasswordToClipboard = useCallback(() => {
     passwordRef.current?.select()
@@ -31,6 +33,7 @@ function App() {
   }, [password])
 
 
+// use to call the useCallback function  or passwordGenerator function
   useEffect(() => {
     passwordGenerator()
   }, [length, numberAllowed, charAllowed, passwordGenerator])
